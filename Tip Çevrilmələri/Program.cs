@@ -1,4 +1,5 @@
-﻿using System.Runtime.CompilerServices;
+﻿using System.Net.Http.Headers;
+using System.Runtime.CompilerServices;
 
 namespace Tip_Çevrilmələri
 {
@@ -103,6 +104,99 @@ namespace Tip_Çevrilmələri
             //bool check6 = int.TryParse(str8, out c);
             //Console.WriteLine(check6);
             #endregion
+
+            #region IsPrimitive
+            ////IsPrimitive - propertydi. data tipinin primtive olmasin yoxlayir.True ve False qaytarir.
+            ////typeof - keywordu. Data tipleri uzerinde emelliyyatlar aparmagimiza imkan verir.
+            //bool check = typeof(int).IsPrimitive;
+            //Console.WriteLine(check);
+            #endregion
+
+            #region Checked Uncecked
+            ////Data itkisi mumkun olan hallarda, eger data itkisi olarsa xeta qaytarmasi ucun Checked blokundan istifade edilir.
+            ////Kodlarin default hali Unchecked blokunda olur
+            //checked
+            //{
+            //    int number = 260;
+            //    byte num = (byte)number;
+            //    Console.WriteLine(num);
+
+            //}
+            //unchecked
+            //{
+
+            //}
+
+            #endregion
+
+            #region TryCatch
+            ////Siz kodunuza,  Eger kodunuzda bir xeta bas vererse ne etmesi lazim oldugunu izah edirsiz.
+
+            ////try -- esas kodumuzun oldugu hisse
+            ////catch -- her hansi bir xeta bas vererse kodumuzun ne etmeli oldugunu izah eden hisse
+            ////finally -- xeta bas versede/vermesede yenede icra olunacaq hisse.
+
+            //try
+            //{
+            //    checked
+            //    {
+            //        int number = 159;
+            //        byte num = (byte)number;
+            //        Console.WriteLine(num);
+            //    }
+            //}
+            //catch (Exception ex)
+            //{
+            //    Console.WriteLine("Data Itkisi Olduguna Gore Emeliyyat Saxlanildi.");
+            //}
+            //finally
+            //{
+            //    Console.WriteLine("Bitdi.");
+            //}
+
+            #endregion
+
+            #region Boxing Unboxing
+            ////Value ve ya Referance tip ferq etmir.
+
+
+            ////Boxing - her hansi bir data tipindeki deyiseni/deyeri object data tipine teyin etmek.
+
+            //int number = 798;
+            //object obj = number;
+
+            //object obj2 = 789;
+
+            //string str = "Cavid";
+            //object obj3 = str;
+
+            //object obj4 = "Bunyatov";
+
+            ////Unboxing - object data tipinden  her hansi basqa bir data tipine deyer teyin etmek
+
+            //object obj5 = 89;
+            //int num = (int)obj5;
+
+            //object obj6 = "Cavid";
+            //string str2 = (string)obj6;
+            #endregion
+
+            #region ASCII 
+            ////char data tipinden tam ededleri ozunde tutan data tiplerine ve ya eksine tip cevilmesi (Type Conversion) oldugda bu ASCII cedveline gore hesablanir.
+            ////Bunun qarsisin almaq ucun cevrilmek istenilen deyisen evvelce string data tipine ondan sonra istenilen data tipine cevrilmelidir.
+
+
+            //int number = 3;
+            //string str = number.ToString();
+            //char symbol = Convert.ToChar(str);
+            //Console.WriteLine(symbol);
+
+            //char symbol2 = '8';
+            //string str2 = symbol2.ToString();
+            //int num = Convert.ToInt32(str2);
+            //Console.WriteLine(num);
+            #endregion
+
 
             #endregion
 
