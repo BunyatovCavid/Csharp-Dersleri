@@ -157,28 +157,25 @@ namespace Tip_Çevrilmələri
             #endregion
 
             #region Boxing Unboxing
-            ////Value ve ya Referance tip ferq etmir.
+            //Boxing - deyisenin/deyerin value data tipinden object data tipine cevrilmesi, yeni cast ve ya convert edilmesi.
 
+            int number = 45;
+            object obj = number;
 
-            ////Boxing - her hansi bir data tipindeki deyiseni/deyeri object data tipine teyin etmek.
+            bool check = false;
+            object obj2 = check;
 
-            //int number = 798;
-            //object obj = number;
+            char symbol = '+';
+            object obj3 = symbol;
 
-            //object obj2 = 789;
+            //Unboxing - deyisenin/deyerin object data tipinden her hansi bir value data tipine cevrilmesi, yeni cast ve ya convert edilmesi.
+            int number2 = (int)obj;
+            int number3 = Convert.ToInt32(obj);
 
-            //string str = "Cavid";
-            //object obj3 = str;
+            bool check2 = Convert.ToBoolean(obj2);
 
-            //object obj4 = "Bunyatov";
+            char symbol2 = Convert.ToChar(obj3);
 
-            ////Unboxing - object data tipinden  her hansi basqa bir data tipine deyer teyin etmek
-
-            //object obj5 = 89;
-            //int num = (int)obj5;
-
-            //object obj6 = "Cavid";
-            //string str2 = (string)obj6;
             #endregion
 
             #region ASCII 
