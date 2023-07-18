@@ -5,7 +5,9 @@ VisualStudioVersion = 17.3.32922.545
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Data Tipleri", "Data Tipleri\Data Tipleri.csproj", "{EA40038F-73C3-41F9-B140-9C8C4DD7EBE4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tip Çevrilmələri", "Tip Çevrilmələri\Tip Çevrilmələri.csproj", "{7569DC8A-694A-4DAA-BA2A-C4368F9813FF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tip Çevrilmələri", "Tip Çevrilmələri\Tip Çevrilmələri.csproj", "{7569DC8A-694A-4DAA-BA2A-C4368F9813FF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Operatorlar", "Operatorlar\Operatorlar.csproj", "{EDC3999C-2BFA-4420-9B8A-FFF43F2AFD22}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{7569DC8A-694A-4DAA-BA2A-C4368F9813FF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7569DC8A-694A-4DAA-BA2A-C4368F9813FF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7569DC8A-694A-4DAA-BA2A-C4368F9813FF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EDC3999C-2BFA-4420-9B8A-FFF43F2AFD22}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EDC3999C-2BFA-4420-9B8A-FFF43F2AFD22}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EDC3999C-2BFA-4420-9B8A-FFF43F2AFD22}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EDC3999C-2BFA-4420-9B8A-FFF43F2AFD22}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
