@@ -74,172 +74,163 @@
 
             #region Bitwise         
 
-            #region 10-luq say siteminden 2-lik say sistemine ve eksine
+            #region verilen tam ededi 10-luq say sisteminden 2-lik say sistemine cevirmek ve eksine
+            /* 8 
+             * 
+             *  8/2=4 (0)
+             *  4/2=2 (0)
+             *  2/2=1 (0)
+             *  1/2 =0 (1)
+             * 
+             *  0000 1000
+             *  
+             *  0      0      0       0     1      0      0      0
+             *  2**7   2**6   2**5    2**4  2**3   2**2   2**1   2**0
+             *  
+             *  
+             *  0+0+0+0+8+0+0+0 = 8
+             */
 
-            ///* 8
-            // *  
-            // * 8/2 = 4 (0)
-            // * 4/2 = 2 (0)
-            // * 2/2 = 1 (0)
-            // * 1/2 = 0 (1)
-            // *
-            // * 0000 1000
-            // *
-            // * 0      0      0      0      1      0      0      0
-            // * 2**7   2**6   2**5   2**4   2**3   2**2   2**1   2**0
-            // * 
-            // * 0 + 0 + 0 + 0 + 8 + 0 + 0 + 0 = 8
-            // */
-
-            ///* 18 
-            // * 
-            // * 18/2 = 9 (0)
-            // * 9/2 = 4 (1)
-            // * 4/2 = 2 (0)
-            // * 2/2 = 1 (0) 
-            // * 1/2 = 0 (1)
-            // * 
-            // * 
-            // * 0001 0010
-            // * 
-            // *    0       0       0      1       0      0     1      0
-            // *    2**7    2**6    2**5   2**4    2**3   2**2  2**1   2**0
-            // *    
-            // *    0 + 0 + 0 + 16 + 0 + 0 + 2 + 0 = 18
-            // *    
-            // */
-
+            /* 18
+             * 
+             * 18/2=9 (0)
+             * 9/2=4 (1)
+             * 4/2=2 (0)
+             * 2/2=1 (0)
+             * 1/2 =0 (1)
+             * 
+             * 
+             *  0001 0010
+             *  
+             *  
+             *  0       0      0      1      0       0      1      0
+             *  2**7    2**6   2**5   2**4   2**3    2**2   2**1   2**0
+             *  
+             *  0+0+0+16+0+0+2+0 =18
+             *  
+             */
 
             #endregion
 
-            ///* & - Bitwise And : operatorun sol ve sag terefindeki ededlerin 2-lik say sistemindeki bitlerini qarsilastirir,
-            // * eger uygun gelen her iki bit 1 olarsa o zaman uygun gelen bitlerin yerine cavabda 1 yazir, eks halda hemin bitin yerin cavabda 0 yazir.
-            // * 
-            // * | - Bitwise Or : operatorun sol ve sag terefindeki ededlerin 2-lik say sistemindeki bitlerini qarsilastir,
-            // * eger uygun gelen bitlerden her hansi biri 1 olarsa o zaman uygun gelen bitlerin yerine cavabda 1 yazir, eks halda 0 yazir
-            // * 
-            // * ^ - Bitwise Exclusive Or (XOR) :  operatorun sol ve sag terefindeki ededlerin 2-lik say sistemindeki bitlerini qarsilastir,
-            // * eger uygun gelen bitlerden yanliz ve yanliz biri 1 olarsa o zaman uygun gelen bitlerin yerine cavabda 1 yazacaq, eks halda 0 yazacaqdir.
-            // * 
-            // * ~ - Bitwise Compliment : bir deyer ile isleyir, hemin deyerin tamamlayicisin qaytarir, bunun ucunde evvelce hemen deyerin bitlerinin eks tapir,
-            // * daha sonra hemin eksin bir defede eksin tapir  ustune 1 gelir ve menfi 1-e vurur.
-            // * -(N + 1)
-            // * N = ~(~N)
-            // * 
-            // * >> - Bitwise shift rigth : operatorun sol terefinde yazilan deyerin bitlerini operatorun sag terefinde yazilan tam eded qeder sag terefe surusdurur.
-            // *
-            // * << - Bitwise shift left : operatorun sol terefinde yazilan deyerin bitlerini operatorun sag terefinde yazilan tam eded qeder sol terefe surusdurur.
-            // */
+            //int number1 = 8;
+            //int number2 = 18;
 
-            //int number1 = 8; //0000 1000
-            //int number2 = 18;//0001 0010
-            
-            //int number3 = number1 & number2; // 0 - 0000 0000
+            //// & (Bitwise And) : verilen ededlerin 2-lik say sistemindeki uygun bitleri qarsilastir ve eger her ikisi 1 olarsa o zaman cavab uygun bite 1 qeyd edir,
+            ////eks halda uygun bite 0 qeyd edir.
+
+            //int number3 = 2 & number2; //8 & 18  = >0000 1000 & 0001 0010 = > 0000 0000 => 0
 
             ///*
-            // *  0000 1000  1 -True
-            // *  0001 0010  0- False
-            // *  
-            // *  0000 0000  
+            // * 0000 1000 (8)  1 - True
+            // * 0001 0010 (18)   0 - False
+            // * 
+            // * 0000 0000 (0)
             // */
 
-            //int number4 = number1 | number2;// 26 - 0001 1010
+            ///* 0001 0010 (18)  1- True
+            // * 0000 0010 (2)   0 - False
+            // * 
+            // * 0000 0010 (2)
+            // */
+
+
+            //// | (Bitwise Or) : verilen ededlerin 2-lik say sistemindeki uygun bitlerini qarsilastirir ve bitlerden en az biri 1 olarsa o zaman cavabda uygun bite 1 qeyd edir,
+            ////eks halda uygun bite 0 qeyd edir
+
+            //int number4 = number1 | number2;
             ///*
-            // * 26/2 = 13 (0)
-            // * 13/2 = 6 (1)
-            // * 6/2 = 3 (0)
-            // * 3/2 = 1 (1)
-            // * 1/2 = 0 (1)
+            // * 0000 1000 (8)   1-True
+            // * 0001 0010 (18)  0-False
             // * 
-            // * 0001 1010
-            // * 
+            // * 0001 1010 (26)
+            // *    16+  8 +  2 =26
             // */
 
+            //// ^ (Bitwise Exclusive Or (XOR)) : verilen ededlerin 2-lik say sistemindeki uygun bitlerinden yanliz biri 1 olarsa o zaman cavabdaki uygun bitin yerine 1 qeyd edir,
+            ////eks halda uygun bitin yerine 0 qeyd edir.
+
+            //int number5 = 2 ^ number2;
 
             ///*
-            // *  0000 1000  1 -True
-            // *  0001 0010  0-False
-            // *  
-            // *  0001 1010 
+            // * 0000 1000 (8)   1- True
+            // * 0001 0010 (18)  0-False
+            // * 
+            // * 0001 1010 (26)
+            // * 
+            // * 
+            // * 0001 0010 (18)  1-True
+            // * 0000 0010 (2)   0-False
+            // * 
+            // * 0001 0000 (16)
+            // * 
             // */
 
-            //int number5 = 2 ^ number2; // 26 - 0001 1010
-
-            ///*
-            // *  0000 1000  1 -True
-            // *  0001 0010  0-False
-            // *  
-            // *  0001 1010
-            // */
-
-
-            ///* 2 /2 = 1 (0)
-            // * 1/2 = 0 (1)
-            // * 
-            // * 
-            // * 
-            // * 0000 0010 1-True
-            // * 0001 0010 0-False
-            // * 
-            // * 0001 0000
-            // * 
-            // * 
-            // * 
-            // *  0     0     0     1     0     0     0     0
-            // *  2**7  2**6  2**5  2**4  2**3  2**2  2**1  2**0
-            // *  
-            // *   0 + 0 + 0 + 16 + 0 + 0 +0 +0 = 16
-            // */
-
-            //int number6 = ~53;
-            //// 0000 1000
-            //// 1111 0111
-            //// 0000 1000
-            //// 0000 1001
-            //// - (0000 1001) = -9
-
-            ////  -(N + 1)
+            //// ~ (Bitwise Compliment) : bir deyisenle istifade olunur. Verilen deyisenin deyerinin 2-lik say sistemindeki
+            //// bitlerini tam eksine cevirir( 0 -lar 1-e, 1-ler 0-a), istenilen N sayli ededin tamamlayicisini tapa bilmek ucun asagdaki qaydadan istifade ede bilersiz.
+            ////-(N+1)
             //// N = ~(~N)
+            //int number6 = ~number2;
 
-            //int number7 = number1 >> 4; // 0000 1000
             ///*
-            // *  0000 1000
-            // *  
-            // *  0000 0010
+            // * 0001 0010 (18)
+            // * 1110 1101 
+            // * 0001 0010
+            // * +       1
+            // * -(0001 00011) = -19
+            // */
+
+
+            //// >> (Bitwise shift right) :operatonun sol terefinde qeyd edilen deyerin bitlerini operatorun sag terefinde gosterilen tam eded qeder saga surusdurur.
+
+            //int number7 = number1 >> 4;
+            ///*
+            // * 0000 1000 (8)
             // * 
+            // * 0000 0010 (2)
+            // * 
+            // * 0000 0000 (0)
             // */
-            //int number8 = number1 << 5; // 0000 1000
+
+            //// << (Bitwise shift left) : operatonun sol terefinde qeyd edilen deyerin bitlerini operatorun sag terefinde gosterilen tam eded qeder sola surusdurur
+
+            //int number8 = number1 << 6;
             ///*
-            // *  0000 1000
-            // *  0010 0000
+            // * 0000 1000 (8)
+            // * 
+            // * 0010 0000 (32)
             // */
-
-
-            //// Console.WriteLine(number8);
+            //Console.WriteLine(number8);
 
             #endregion
 
             #region Ternary
             //// ? :
 
-            //// sert  ? True : False
+            //// sert ? True : False
 
-            //string str = 15 < 13 ? "Dogrudur" : "Sehvdir";
-            ////Console.WriteLine(str);
+            //int num = 15 < 13 ? 15 : 13;
 
+            //Console.WriteLine(num);
             #endregion
 
             #region Null-Coalescing
-            //// ?? , ??=  : iki operatorda eger sol terefde yazilan deyisenin deyeri null-a beraberdise o zaman sag terefdeki deyisenin deyerin/deyeri geriye qaytarir.
-            ////??= : bu operator sadece geriye deyer qaytarmir hemde sol terefdeki null deyere malik olan deyisenin deyerin sag terefde qeyd edilen deyere beraber edir.
+            ////?? ,??=  - Her iki operatorda yanliz nullable-type'larla istifade olunur. Her iki operatorda deyer qaytarir, eger verilen deyisen(sol terefdeki) null deyilse
+            ////o zaman hemin deyisenin deyeri geri donderilir, eks halda diger value(sag terefdeki) geri donderilir.
+
+            //// null deyer qebul eden data tipili (nullable-type) deyisen ?? value
+            //// null deyer qebul eden data tipili (nullable-type) deyisen ??= value
 
             //int? num1 = null;
 
             //int? num2 = num1 ?? 45;
 
-            //int? num3 = num1 ??= 45;
-            ////Console.WriteLine(num3);
+            //int num3 = num1 ??= 66;
+
+            //Console.WriteLine("num2 :" + num2);
+            //Console.WriteLine("num3 :" + num3);
+
             #endregion
+
 
         }
     }
