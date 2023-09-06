@@ -9,7 +9,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tip Çevrilmələri", "Tip 
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Operatorlar", "Operatorlar\Operatorlar.csproj", "{EDC3999C-2BFA-4420-9B8A-FFF43F2AFD22}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IfElse_SwitchCase", "IfElse_SwitchCase\IfElse_SwitchCase.csproj", "{9D4C0195-252F-460A-9E79-27A1977A296E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IfElse_SwitchCase", "IfElse_SwitchCase\IfElse_SwitchCase.csproj", "{9D4C0195-252F-460A-9E79-27A1977A296E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Döngülər", "Döngülər\Döngülər.csproj", "{A51FE0DF-8B12-4684-A1EC-FB2373F95C77}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{9D4C0195-252F-460A-9E79-27A1977A296E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9D4C0195-252F-460A-9E79-27A1977A296E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9D4C0195-252F-460A-9E79-27A1977A296E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A51FE0DF-8B12-4684-A1EC-FB2373F95C77}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A51FE0DF-8B12-4684-A1EC-FB2373F95C77}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A51FE0DF-8B12-4684-A1EC-FB2373F95C77}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A51FE0DF-8B12-4684-A1EC-FB2373F95C77}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
